@@ -1,6 +1,0 @@
-/**
- * @license angular-slides
- * (c) 2015 André Gaul <andre@gaul.io>
- * License: MIT
- */
-"use strict";angular.module("ngSlides",["ngSlidesTemplates","ngAnimate"]).directive("slides",function(e){return{restrict:"E",scope:{},transclude:!0,templateUrl:"templates/slides.html",controller:function(l){var s=l.slides=[],d=function(e,d){void 0===e||0>e||e>=s.length||(void 0!==d&&(s[d].selected=!1),s[e].selected=!0,l.slideIndex=e)};l.$watch("slideIndex",d),this.addSlide=function(e){s.push(e),1===s.length&&d(0)},e.on("keyup",function(e){39===e.keyCode&&l.slideIndex+1<s.length&&l.$apply(function(){l.slideIndex++}),37===e.keyCode&&l.slideIndex>0&&l.$apply(function(){l.slideIndex--})})}}}).directive("slide",function(){return{restrict:"E",require:"^slides",transclude:!0,scope:{},replace:!0,templateUrl:"templates/slide.html",link:function(e,l,s,d){d.addSlide(e)}}}),angular.module("ngSlidesTemplates",[]).run(["$templateCache",function(e){e.put("ngSlidesTemplates/slide.html",'<div ng-if="selected" ng-transclude class="slide"></div>'),e.put("ngSlidesTemplates/slides.html",'<div class="slide"></div><div ng-keydown="onKeypress($event)" ng-transclude class="slides"></div>')}]);

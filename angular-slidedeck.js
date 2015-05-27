@@ -1,5 +1,5 @@
 /**
- * @license angular-slides
+ * @license angular-slidedeck
  * (c) 2015 André Gaul <andre@gaul.io>
  * License: MIT
  */
@@ -13,7 +13,7 @@ angular.module('ngSlides', ['ngSlidesTemplates', 'ngAnimate'])
       scope: {
       },
       transclude: true,
-      templateUrl: 'templates/slides.html',
+      templateUrl: 'ngSlidedeck/slides.html',
       controller: function($scope) {
         var slides = $scope.slides = [];
 
@@ -65,7 +65,7 @@ angular.module('ngSlides', ['ngSlidesTemplates', 'ngAnimate'])
       transclude: true,
       scope: {},
       replace: true,
-      templateUrl: 'templates/slide.html',
+      templateUrl: 'ngSlidedeck/slide.html',
       link: function(scope, element, attrs, slidesCtrl) {
         slidesCtrl.addSlide(scope);
       },
@@ -74,5 +74,5 @@ angular.module('ngSlides', ['ngSlidesTemplates', 'ngAnimate'])
 
   ;
 
-angular.module("ngSlidesTemplates", []).run(["$templateCache", function($templateCache) {$templateCache.put("ngSlidesTemplates/slide.html","<div ng-if=\"selected\" ng-transclude class=\"slide\"></div>");
-$templateCache.put("ngSlidesTemplates/slides.html","<div class=\"slide\"></div><div ng-keydown=\"onKeypress($event)\" ng-transclude class=\"slides\"></div>");}]);
+angular.module("ngSlidedeckTemplates", []).run(["$templateCache", function($templateCache) {$templateCache.put("ngSlidedeckTemplates/slide.html","<div ng-if=\"selected\" ng-transclude class=\"slide\"></div>");
+$templateCache.put("ngSlidedeckTemplates/slides.html","<div class=\"slide\"></div><div ng-keydown=\"onKeypress($event)\" ng-transclude class=\"slides\"></div>");}]);

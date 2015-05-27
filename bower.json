@@ -1,17 +1,18 @@
 {
-  "name": "angular-slides",
+  "name": "angular-slidedeck",
   "version": "0.1.0",
-  "homepage": "https://github.com/paperhive/angular-slides",
+  "homepage": "https://github.com/paperhive/angular-slidedeck",
   "authors": [
     "André Gaul <andre@gaul.io>"
   ],
   "description": "Create presentation slides – the AngularJS way!",
-  "main": "angular-slides.js",
+  "main": "angular-slidedeck.js",
   "keywords": [
     "angular",
     "angularjs",
     "slide",
     "slides",
+    "slidedeck",
     "presentation",
     "deck"
   ],
