@@ -13,7 +13,7 @@ angular.module('ngSlidedeck', ['ngSlidedeckTemplates', 'ngAnimate'])
       scope: {
       },
       transclude: true,
-      templateUrl: 'ngSlidedeck/slides.html',
+      templateUrl: 'ngSlidedeckTemplates/slides.html',
       controller: function($scope) {
         var slides = $scope.slides = [];
 
@@ -65,7 +65,7 @@ angular.module('ngSlidedeck', ['ngSlidedeckTemplates', 'ngAnimate'])
       transclude: true,
       scope: {},
       replace: true,
-      templateUrl: 'ngSlidedeck/slide.html',
+      templateUrl: 'ngSlidedeckTemplates/slide.html',
       link: function(scope, element, attrs, slidesCtrl) {
         slidesCtrl.addSlide(scope);
       },
@@ -74,5 +74,5 @@ angular.module('ngSlidedeck', ['ngSlidedeckTemplates', 'ngAnimate'])
 
   ;
 
-angular.module("ngSlidedeckTemplates", []).run(["$templateCache", function($templateCache) {$templateCache.put("ngSlidedeckTemplates/slide.html","<div ng-if=\"selected\" ng-transclude class=\"slide\"></div>");
+angular.module("ngSlidedeckTemplates", []).run(["$templateCache", function($templateCache) {$templateCache.put("ngSlidedeckTemplates/slide.html","<div ng-if=\"selected\" class=\"slide\" ng-transclude></div>");
 $templateCache.put("ngSlidedeckTemplates/slides.html","<div class=\"slide\"></div><div ng-keydown=\"onKeypress($event)\" ng-transclude class=\"slides\"></div>");}]);
