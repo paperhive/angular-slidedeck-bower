@@ -5,7 +5,7 @@
  */
 'use strict';
 
-angular.module('ngSlides', ['ngSlidesTemplates', 'ngAnimate'])
+angular.module('ngSlidedeck', ['ngSlidedeckTemplates', 'ngAnimate'])
 
   .directive('slides', function($document) {
     return {
