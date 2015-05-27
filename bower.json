@@ -1,0 +1,19 @@
+{
+  "name": "angular-slides",
+  "version": "0.1.0",
+  "homepage": "https://github.com/paperhive/angular-slides",
+  "authors": [
+    "André Gaul <andre@gaul.io>"
+  ],
+  "description": "Create presentation slides – the AngularJS way!",
+  "main": "angular-slides.js",
+  "keywords": [
+    "angular",
+    "angularjs",
+    "slide",
+    "slides",
+    "presentation",
+    "deck"
+  ],
+  "license": "MIT"
+}
