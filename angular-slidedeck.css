@@ -29,22 +29,19 @@ body {
   top: 50%;
   position: absolute;
   overflow: hidden;
-  transition: opacity ease 0.5s;
   border-radius: 10px;
+  padding: 40px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 .slide-background {
   background-color: white;
   border: 1px solid transparent;
+  background-clip: padding-box;
 }
-.slide-body {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-radius: 10px;
-  background-color: white;
-  padding: 40px;
+.slide {
+  transition: opacity ease 0.5s;
 }
 .slide.ng-enter,
 .slide.ng-leave.ng-leave-active {
