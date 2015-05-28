@@ -75,4 +75,4 @@ angular.module('ngSlidedeck', ['ngSlidedeckTemplates', 'ngAnimate'])
   ;
 
 angular.module("ngSlidedeckTemplates", []).run(["$templateCache", function($templateCache) {$templateCache.put("ngSlidedeckTemplates/slide.html","<div ng-if=\"selected\" class=\"slide\" ng-transclude></div>");
-$templateCache.put("ngSlidedeckTemplates/slides.html","<div class=\"slide\"></div><div ng-keydown=\"onKeypress($event)\" ng-transclude class=\"slides\"></div>");}]);
+$templateCache.put("ngSlidedeckTemplates/slides.html","<div class=\"slide-background\"></div><div ng-keydown=\"onKeypress($event)\" ng-transclude class=\"slides\"></div>");}]);
